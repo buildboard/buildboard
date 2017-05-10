@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "*":["server/typings/*"]
+    },
+    "target": "es2017",
+    "outDir": "dist",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true
+  },
+  "include": [
+    "server"
+  ],
+  "exclude": [
+    "client/**/*"
+  ]
+}

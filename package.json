@@ -1,0 +1,32 @@
+{
+  "name": "buildboard",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "ts-node server/app.ts",
+    "client": "ts-node start-client.js",
+    "install": "ts-node install-client-dependencies.js"
+  },
+  "dependencies": {
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-passport": "^3.0.0",
+    "koa-router": "^7.1.1",
+    "koa-session": "^5.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/koa-passport": "^2.0.4",
+    "@types/koa-router": "^7.0.22",
+    "@types/koa-session-minimal": "^3.0.4",
+    "@types/node": "^7.0.18",
+    "@types/passport-local": "^1.0.30",
+    "concurrently": "3.4.0",
+    "ts-node": "3.0.4",
+    "typescript": "2.3.2"
+  }
+}

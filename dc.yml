@@ -1,0 +1,15 @@
+
+version: '2'
+
+services:
+    buildboard:
+        image: buildboard/buildboard:latest
+        ports:
+            - "80:3000"
+        depends_on:
+            - mongo
+
+    mongo:
+        image: mongo
+        ports:
+            - "27017:27017"
