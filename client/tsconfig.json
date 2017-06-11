@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "build/dist",
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "*":["src/typings/*"]
+    },
     "module": "commonjs",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -14,6 +19,7 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
@@ -25,8 +31,5 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
-  ],
-  "types": [
-    "typePatches"
   ]
 }

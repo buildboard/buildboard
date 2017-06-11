@@ -23,7 +23,7 @@
     "@types/koa-passport": "^2.0.4",
     "@types/koa-router": "^7.0.22",
     "@types/koa-session-minimal": "^3.0.4",
-    "@types/node": "^7.0.18",
+    "@types/node": "7.0.21",
     "@types/passport-local": "^1.0.30",
     "concurrently": "3.4.0",
     "ts-node": "3.0.4",

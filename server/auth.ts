@@ -3,7 +3,7 @@ import {Strategy as LocalStrategy} from 'passport-local';
 
 const fetchUser = (() => {
     // This is an example! Use password hashing in your
-    const user = {id: 1, username: 'test', password: 'test'};
+    const user = {id: 1, username: 'test@test.ru', password: 'test'};
     return async function () {
         return user
     }
@@ -25,6 +25,7 @@ passport.deserializeUser(async function (_, done) {
 passport.use(new LocalStrategy(function (username, password, done) {
     fetchUser()
         .then(user => {
+            console.log(username, password);
             if (username === user.username && password === user.password) {
                 done(null, user)
             } else {
