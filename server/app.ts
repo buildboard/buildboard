@@ -4,6 +4,8 @@ import * as bodyParser from "koa-bodyparser";
 import "./auth";
 import * as passport from "koa-passport";
 import * as Router from "koa-router";
+import * as graphqlHTTP from "koa-graphql";
+import {schema} from './schema';
 
 const koaApp = new Koa();
 const router = new Router();
@@ -36,6 +38,11 @@ koaApp.use(async (ctx, next) => {
     ctx.res.statusCode = 200;
     await next();
 });
+
+router.all('/graphql', graphqlHTTP({
+    schema: schema,
+    graphiql: true
+}));
 
 koaApp.use(router.routes());
 koaApp.listen(3001, () => {
